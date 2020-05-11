@@ -8,20 +8,35 @@ const copyTextEl = document.querySelector('#copyText');
 document.addEventListener('input', e =>
 {
         const value = e.target.value;
+        console.log(value);
         if(Number(value) || value ==='0') {
-            console.log(value);
             previewerBox.style.borderTopLeftRadius= borderTopLeft.value + 'px';
             previewerBox.style.borderTopRightRadius= borderTopRight.value + 'px';
             previewerBox.style.borderBottomRightRadius= borderBottomRight.value + 'px';
             previewerBox.style.borderBottomLeftRadius= borderBottomLeft.value + 'px';
             
-            clipboardInput.value = `border-radius: ${borderTopLeft.value}px ${borderTopRight.value}px ${borderBottomRight.value}px ${borderBottomLeft.value}px;`;
+        }
 
+        if(value ==='0') {
+            // e.target.value = '0';
+            console.log(e.target.value);
         }
-        else {
-            previewerBox.style.borderRadius = '0';
+
+        if(borderTopLeft.value == ''){
+            previewerBox.style.borderTopLeftRadius= '0';
+            console.log(borderTopLeft.value || '0');
         }
-        
+        if(borderTopRight.value == ''){
+            previewerBox.style.borderTopRightRadius= '0';
+        }
+        if(borderBottomRight.value == ''){
+            previewerBox.style.borderBottomRightRadius= '0';
+        }
+        if(borderBottomLeft.value == ''){
+            previewerBox.style.borderBottomLeftRadius= '0';
+        }
+
+        clipboardInput.value = `border-radius: ${borderTopLeft.value || '0'}px ${borderTopRight.value || '0'}px ${borderBottomRight.value || '0'}px ${borderBottomLeft.value || '0'}px;`;
 });
 
 copyTextEl.addEventListener('click', e =>
