@@ -6,15 +6,14 @@
 
 body,a {
     font-family: Verdana, 'Geneva', Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 14px;
 
 }
 
 .container {
-    width:80%;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
-    background-color:rgb(158, 158, 158);
+    background-color: rgb(220, 220, 220);
     padding: 1rem 1rem;
 }
 
@@ -24,7 +23,7 @@ h1 {
     margin-bottom: 1rem;
 }
 .previewer-box {
-    width: 300px;
+    max-width: 300px;
     height: 300px;
     margin: auto;
     margin-bottom: 1rem;
@@ -51,8 +50,7 @@ h1 {
     border: none;
     border-radius: 3px;
     height: 5vh;
-    width: 4;
-    width: 40px;
+    max-width: 40px;
     border-radius: 50%;
     margin-bottom: 1rem;
     border: 1px solid rgb(92, 129, 151);
@@ -61,19 +59,18 @@ h1 {
 .values > p {
     margin-bottom: 5px;
 }
-.clipboard {
-}
 
-#clipboardInput {
-    display: block;
+.clipboard {
     text-align: center;
-    margin: auto;
-    width: 300px;
+}
+#clipboardInput {
+    text-align: center;
     border: none;
     border-radius: 3px;
     height: 3vh;
-    width: 300px;
     margin-bottom: 1rem;
+    max-width: 228px;
+    width: 100%;
 }
 
 #copyText {
@@ -85,7 +82,7 @@ h1 {
     color: rgb(133, 133, 236);
     background-color: rgb(182, 182, 243);
     display: block;
-    width: 300px;
+    max-width: 300px;
     text-align: center;
     margin: auto;
     margin-top: 1rem;
